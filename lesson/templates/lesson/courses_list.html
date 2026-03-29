@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Список предметів</title>
+</head>
+<body>
+    <h1>Список предметів</h1>
+    <ul>
+        {% for course in courses_list %}
+            <li>{{ course.name }}</li>
+        {% empty %}
+            <li>Немає предметів</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

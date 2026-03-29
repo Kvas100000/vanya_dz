@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Розклад</title>
+</head>
+<body>
+    <h1>Розклад занять</h1>
+    <ul>
+        {% for lesson in schedule %}
+            <li>
+                {{ lesson.day_of_week }} | {{ lesson.start_time|time:"H:i" }}–{{ lesson.end_time|time:"H:i" }}<br>
+                Клас: {{ lesson.student_class.name }}<br>
+                Предмет: {{ lesson.subject.name }}<br>
+                Вчитель: {{ lesson.teacher.full_name }}
+            </li>
+        {% empty %}
+            <li>Немає занять</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

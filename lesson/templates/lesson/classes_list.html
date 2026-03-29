@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Класи</title>
+</head>
+<body>
+    <h1>Список класів</h1>
+    <ul>
+        {% for class in classes %}
+            <li>{{ class.name }}</li>
+        {% empty %}
+            <li>Немає класів</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Учні</title>
+</head>
+<body>
+    <h1>Список учнів</h1>
+    <ul>
+        {% for student in students %}
+            <li>{{ student.full_name }} — {{ student.student_class.name }}</li>
+        {% empty %}
+            <li>Немає учнів</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
